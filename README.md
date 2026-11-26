@@ -41,6 +41,12 @@ start page's YottaDB route runs one in Docker from the public
 `worldvista/vehu` image. The toolkit has been tested on a YottaDB VistA in
 Docker only.
 
+**A known problem on IRIS.** Over an IRIS VistA's web address, the
+`v pkg` steps that read routines already on that VistA (`verify --drift`,
+`uninstall`, and installing over an earlier install) take minutes, can
+answer wrongly, and write very large journal files there. Do not run them
+on an IRIS VistA until a release says this is fixed.
+
 ## Where to start
 
 The start page, <https://vista-forge.github.io/forge-docs/start/>, walks
