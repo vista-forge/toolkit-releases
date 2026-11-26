@@ -36,16 +36,17 @@ Put the unpacked folder on your `PATH` and read its `README.md`.
 
 ## What you need
 
-Docker, and a VistA to work on: the download does not include one. The
-start page's YottaDB route runs one in Docker from the public
-`worldvista/vehu` image. The toolkit has been tested on a YottaDB VistA in
-Docker only.
+A VistA to work on: the download does not include one. The start page's
+YottaDB route runs one in Docker from the public `worldvista/vehu` image;
+its IRIS route reaches an IRIS VistA you already have at its web address,
+with no Docker. From 0.1.3, each release is tested on both before it is
+published.
 
-**A known problem on IRIS.** Over an IRIS VistA's web address, the
-`v pkg` steps that read routines already on that VistA (`verify --drift`,
-`uninstall`, and installing over an earlier install) take minutes, can
-answer wrongly, and write very large journal files there. Do not run them
-on an IRIS VistA until a release says this is fixed.
+**Releases 0.1.2 and earlier have a problem on IRIS, fixed in 0.1.3.** Over
+an IRIS VistA's web address, their `v pkg` steps that read routines already
+on that VistA (`verify --drift`, `uninstall`, and installing over an
+earlier install) take minutes, can answer wrongly, and write very large
+journal files there. Use 0.1.3 or later on IRIS.
 
 ## Where to start
 
